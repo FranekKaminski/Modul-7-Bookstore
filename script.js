@@ -1,0 +1,8 @@
+
+function likeBook(){
+    
+}
+
+function sendComment(){
+
+}
