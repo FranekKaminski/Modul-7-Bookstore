@@ -1,4 +1,8 @@
 
+function renderBook(){
+    
+}
+
 function likeBook(){
     
 }
