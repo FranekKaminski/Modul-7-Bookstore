@@ -6,9 +6,14 @@
     color: white;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -20,6 +25,7 @@ header {
     justify-content: left;
     align-items: center;
     padding-left: 20px;
+    flex-shrink: 0;
 }
 
 h1 {
@@ -35,12 +41,13 @@ header img {
 main {
     background: rgb(8, 23, 29);
     width: 100%;
-    min-height: calc(100vh - 150px);
     flex: 1;
+}
+
+.firstdiv {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
     padding: 15px;
 }
@@ -98,6 +105,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .description {
