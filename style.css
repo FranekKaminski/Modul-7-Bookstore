@@ -81,6 +81,7 @@ h2 {
 
 .heartimage:hover {
     filter: brightness(150%);
+    cursor: pointer;
 }
 
 .blueline {
@@ -117,12 +118,17 @@ table {
 
 /* COMMENTS */
 
+.seconddiv {
+    width: 100%;
+    height: calc(100% - 32px);
+    color: whitesmoke;
+}
+
 .comments {
     padding: 20px;
     display: flex;
-    justify-content: start;
-    align-items: left;
     flex-direction: column;
+    height: 220px;
     width: 100%;
     gap: 10px;
 }
@@ -156,13 +162,53 @@ input:focus {
 
 .sendicon:hover {
     filter: brightness(150%);
+    cursor: pointer;
 }
 
+.comments_box {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-top: 8px;
+    height: calc(100% - 32px);
+    overflow-y: scroll;
+}
+
+.comments_box::-webkit-scrollbar {
+    width: 4px;
+}
+
+.comments_box::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.comments_box::-webkit-scrollbar-thumb {
+    background-color: #6bc1e1;
+    border-radius: 10px;
+}
+
+.comments_box::-webkit-scrollbar-track {
+    background: #124658;
+    border: 0px none #6bc1e1;
+    border-radius: 50px;
+}
+
+.single_comment {
+    margin-bottom: 6px;
+    display: flex;
+    flex-direction: row;
+}
+
+.single_comment p:first-child {
+    display: block;
+    flex-shrink: 0;
+    width: 124px;
+}
 
 /* RESPONSIVE */
 
-@media(max-width: 540px){
-    h1{
+@media(max-width: 540px) {
+    h1 {
         font-size: 20px;
     }
 }

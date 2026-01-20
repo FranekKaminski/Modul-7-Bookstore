@@ -13,7 +13,7 @@ function bookTemplate(i) {
                     <p tabindex="0" class="price">${book.price} €</p>
                     <div class="likes">
                         <p>${book.likes}</p>
-                        <img tabindex="0" onclick="likeBook(${i})" class="heartimage" src="./img/heartoutline.png" alt="Heart Icon">
+                        <img tabindex="0" onclick="likeBook(${i})" class="heartimage" src="${renderHeartIcon(i)}" alt="Heart Icon">
                     </div>
                 </div>
                 <table>
@@ -33,13 +33,14 @@ function bookTemplate(i) {
             </div>
             <div class="blueline"></div>
             <div class="comments">
+            <div class="seconddiv">
                 <h3>Kommentare:</h3>
-                <div class="livecomments">
-                    Test
-                </div>
+                <div class="comments_box">
+                    ${getCommentsTemplate(i)}
+                </div></div>
                 <div class="commentinput">
-                    <input type="text" placeholder="Schreibe dein Kommentar ...">
-                    <img tabindex="0" onclick="sendComment()" class="sendicon" src="./img/paper-plane-icon.png"
+                <input id="commentinput${i}" type="text" placeholder="Schreibe deinen Kommentar ..." required>
+                    <img tabindex="0" onclick="sendComment(${i})" class="sendicon" src="./img/paper-plane-icon.png"
                         alt="send comment icon">
                 </div>
             </div>
