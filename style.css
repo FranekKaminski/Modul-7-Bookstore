@@ -206,6 +206,10 @@ input:focus {
 }
 
 /* RESPONSIVE */
+.width-control {
+    padding-left: calc(50% - 720px);
+    padding-right: calc(50% - 720px);
+}
 
 @media(max-width: 540px) {
     h1 {

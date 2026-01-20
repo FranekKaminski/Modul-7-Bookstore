@@ -1,7 +1,7 @@
 function bookTemplate(i) {
     let book = books[i]
     return `
-    <div class="books">
+    <article class="books">
     <h2 tabindex="0">${book.name}</h2>
             <div class="blueline"></div>
             <div>
@@ -13,7 +13,7 @@ function bookTemplate(i) {
                     <p tabindex="0" class="price">${book.price} €</p>
                     <div class="likes">
                         <p>${book.likes}</p>
-                        <img tabindex="0" onclick="likeBook(${i})" class="heartimage" src="${renderHeartIcon(i)}" alt="Heart Icon">
+                        <img tabindex="0" onclick="likeBook(${i}, this)" class="heartimage" src="${renderHeartIcon(i)}" alt="Heart Icon">
                     </div>
                 </div>
                 <table>
@@ -44,6 +44,5 @@ function bookTemplate(i) {
                         alt="send comment icon">
                 </div>
             </div>
-            </div>
-`
+            </article>`
 }

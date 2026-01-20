@@ -21,14 +21,18 @@ function renderHeartIcon(i) {
     }
 }
 
-function likeBook(i) {
+function likeBook(i, heartImg) {
+    let likesText = heartImg.previousElementSibling;
+
     if (books[i].liked) {
         books[i].likes--
     } else {
         books[i].likes++
     }
     books[i].liked = !books[i].liked;
-    renderBooks()
+    
+    likesText.innerText = books[i].likes;
+    heartImg.src = renderHeartIcon(i);
 }
 
 function sendComment(i) {
